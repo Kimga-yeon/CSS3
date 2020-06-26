@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    
+        <title>09. 전체 폼 통합</title>
+
+        <!-- 외부로 분리된 css 파일 연결 -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <!-- ctrl+ a (전체선택) ctrl+k, ctrl+f : 코드 정렬 -->
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div id="header1" class="header-float">
+                    <a href="09. 전체 폼 통합.html">
+                        <img src="n7.png" id="home-logo">
+                    </a>
+                </div>
+                <div id="header2" class="header-float">
+                        <Form method="get" id="search-form">
+                            <div id="search-text-area">
+                                <input type="text" id="input-search" name="inputSaerch">
+                            </div>
+                            <div id="search-btn-area">
+                                <button id="search-btn">검색</button>
+                            </div>
+                        </Form>
+                </div>
+                <div id="header3" class="header-float"></div>
+            </div>
+            <div class="navigator">
+                <ul id="navi">
+                    <li><a href="#">Home</a></li> <!-- <a href="#"> : 현재 페이지-->
+                    <li><a href="#">Front-End</a>
+    
+                        <ul>
+                            <li><a href="#">HTML5</a></li>
+                            <li><a href="#">CSS3</a></li>
+                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">jQuery</a></li>
+                            <li><a href="#">Ajax</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">게시판</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                            <li><a href="#">질문게시판</a></li>
+                        </ul>
+                    <li><a href="#">Q&A</a></li>
+                </ul>
+               </div>
+    
+            <div class="content">
+                <div id="content1" class="content-float"></div>
+                <div id="content2" class="content-float"></div>
+                <div id="content3" class="content-float">
+                    <div class="login-wrapper">
+                        <!-- 입력, 버튼이 위치한 form -->
+                        <form method="get" id="login-form">
+            
+                            <!-- id, pwd 입력이 위치한 div -->
+                            <div id="login-input">
+                                <!-- id 입력 영역 -->
+                                <div id="input-id-area">
+                                    <input type="text" id="input-id" name="userId" placeholder="ID를 입력하세요">
+                                </div>
+                            
+                                <!-- pwd 입력 영역 -->
+                                <div id="input-pwd-area">
+                                    <input type="password" id="input-pwd" name="userPwd" placeholder="Pwd를 입력하세요">
+                                </div>
+                            </div>
+                            <!-- 로그인 버튼이 위치한 div -->
+                            <div id="login-btn-area">
+                                <!-- button 태그의 type 기본값은 submit -->
+                                <button id="login-btn">로그인</button>
+                            </div>
+                        </form>
+            
+                        <!-- 회원가입, Id/Pwd 찾기 영역 div -->
+                        <div id="login-form-join">
+                            <a href="#">회원가입</a>&nbsp;&nbsp;
+                            <a href="#">ID/PWD 찾기</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+                <div id="footer1">
+                    <a href="#">이용 약관</a> |
+                    <a href="#">개인정보 취급 방침</a> |
+                    <a href="#">인재 채용</a> |
+                    <a href="#">고객 센터</a>
+                </div>
+        
+                <div id="footer2">
+                    <p>
+                        강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F <br>
+                        강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+                        강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F <br>
+                        종로지원 : 서울특별시 중구 남대문로 120 대일빌딩 2F, 3F <br>
+                        당산지원 : 서울특별시 영등포구 선유동2로 57 이레빌딩 (구관) 19F, 20F 
+                    </p>
+        
+                    <p>
+                        Copyright ⓒ 1998-2020 KH Information Educational Institute All Right Reserved
+                    </p>
+            </div>
+        </div>
+
+    </body>
+</html>

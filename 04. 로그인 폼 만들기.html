@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>04. 로그인폼 만들기</title>
+        <style>
+            div{
+                border : 1px solid black;
+                box-sizing:border-box;
+            }
+
+            /* 로그인 폼 전체 영역 */
+            .login-wrapper{
+                width:300px;
+                height:130px;
+            }
+            
+            /*  입력 영역 */
+            #login-form{
+                width:100%;
+                height:80%;
+            }
+
+            /* 회원가입, 아이디/비번 찾기 영역 스타일 지정 */
+            #login-form-join{
+                width:100%;
+                height:20%;
+                
+           text-align: center;
+           line-height:26px;
+            }
+
+            /* 아이디, 비번 입력 영역 */
+            #login-input{
+                height:100%;
+                width:65%;
+                float :left;
+            }
+
+            /* 로그인 버튼 영역 */
+            #login-btn-area{
+                height:100%;
+                width:35%;
+                float:left;
+            }
+
+            /* 아이디 입력 영역, 비밀번호 입력 영역 */
+            #input-id-area, #input-pwd-area{
+                width:100%;
+                height:50%
+            }
+
+            /* 아이디, 비밀번호 입력 상자 스타일 지정 */
+            #input-id, #input-pwd{
+                width:100%;
+                height:100%;
+
+                /* input 태그에 대한 box-sizing이 설정되지 않았으므로 별도로 설정해 줌 */
+                box-sizing:border-box;
+                font-size:19px;
+            
+            }
+
+            /* 로그인 버튼 스타일 지정 */
+            button{/*#login-brn{*/
+                width:100%;
+                height:100%;
+
+                font-size:19px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="login-wrapper">
+
+            <!-- 입력, 버튼이 위치한 form -->
+            <form method="get" id="login-form">
+
+                <!-- id, pwd 입력이 위치한 div -->
+                <div id="login-input">
+                    <!-- id 입력 영역 -->
+                    <div id="input-id-area">
+                        <input type="text" id="input-id" name="userId" placeholder="ID를 입력하세요">
+                    </div>
+                
+                    <!-- pwd 입력 영역 -->
+                    <div id="input-pwd-area">
+                        <input type="password" id="input-pwd" name="userPwd" placeholder="Pwd를 입력하세요">
+                    </div>
+                </div>
+                <!-- 로그인 버튼이 위치한 div -->
+                <div id="login-btn-area">
+                    <!-- button 태그의 type 기본값은 submit -->
+                    <button id="login-btn">로그인</button>
+                </div>
+            </form>
+
+            <!-- 회원가입, Id/Pwd 찾기 영역 div -->
+            <div id="login-form-join">
+                <a href="#">회원가입</a>&nbsp;&nbsp;
+                <a href="#">ID/PWD 찾기</a>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,342 @@
+/* 웹문서 구조 */
+div{
+    /*border : 1px solid darkblue;*/
+
+    box-sizing : border-box;
+}
+
+.wrapper{
+    width:1000px;
+    height:800px;
+    
+    margin:auto;
+}
+
+.header{
+    width:100%;
+    height:20%;
+}
+
+    #header1{
+        width:20%;
+    }
+
+    #header2{
+        width:65%;
+        position:relative;
+    }
+
+    #header3{
+        width:15%;
+    }
+
+.header-float{
+    height:100%;
+    float:left;
+}
+
+.navigator{
+    width:100%;
+    height:5%;
+    clear:both;
+}
+
+.content{
+    width:100%;
+    height:55%;
+}
+
+    #content1{
+        width:15%;
+    }
+
+    #content2{
+        width:60%;
+    }
+
+    #content3{
+        width:25%;
+    }
+
+.content-float{
+    height:100%;
+    float: left;
+}
+
+.footer{
+    width:100%;
+    height:20%;
+
+    clear : both;
+}
+
+ /* 로그인 폼 전체 영역 */
+ .login-wrapper{
+    width:100%;
+    height:35%;
+}
+
+/*  입력 영역 */
+#login-form{
+    width:100%;
+    height:80%;
+}
+
+/* 회원가입, 아이디/비번 찾기 영역 스타일 지정 */
+#login-form-join{
+    width:100%;
+    height:20%;
+    
+text-align: center;
+line-height:26px;
+}
+
+/* 아이디, 비번 입력 영역 */
+#login-input{
+    height:100%;
+    width:65%;
+    float :left;
+}
+
+/* 로그인 버튼 영역 */
+#login-btn-area{
+    height:100%;
+    width:35%;
+    float:left;
+}
+
+/* 아이디 입력 영역, 비밀번호 입력 영역 */
+#input-id-area, #input-pwd-area{
+    width:100%;
+    height:50%
+}
+
+/* 아이디, 비밀번호 입력 상자 스타일 지정 */
+#input-id, #input-pwd{
+    width:100%;
+    height:100%;
+
+    /* input 태그에 대한 box-sizing이 설정되지 않았으므로 별도로 설정해 줌 */
+    box-sizing:border-box;
+    /*font-size:19px;*/
+
+}
+
+/* 로그인 버튼 스타일 지정 */
+button{/*#login-brn{*/
+    width:100%;
+    height:100%;
+
+    font-size:19px;
+}
+
+/* 검색창 스타일 */
+/* 검색창 영역 스타일 지정 */
+#search-form{
+    width:80%;
+    height:30%;
+    margin:auto;
+
+    position:absolute;
+    top:0;
+    bottom :0;
+    left:0;
+    right:0;
+}
+
+#search-text-area{
+    width:80%;
+    height:100%;
+    float:left;
+}
+
+#search-btn-area{
+    width:20%;
+    height:100%;
+    float:left;
+}
+
+#input-search, #search-btn{
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    font-size:16px;
+}
+
+#footer1{
+    width:100%;
+    height:20%;
+}
+
+#footer2{
+    width:100%;
+    height:80%;
+}
+
+/* footer1 영역의 a태그 스타일 지정 */
+#footer1 >a{
+    text-decoration: none;
+    color : black;
+    font-weight: bold;
+    margin : 0px 10px 0px 10px;
+           /* 위 오른쪽 아래 왼쪽 */
+    line-height:200%;
+}
+
+/* a 태그 마우스 오버 시 색 변화 지정 */
+#footer1 >a:hover{
+    background-color: darkslateblue;
+    color : white;
+}
+
+/* footer-2 영역 스타일 지정 */
+#footer2 >p{
+    font-size:12px;
+    margin:0;
+}
+
+/* footer2의 자식 중 첫번째 p태그 선택 */
+#footer2>p:first-child{
+    height:80%;
+    width:100%;
+}
+
+#footer2>p:last-child{
+    height:20%;
+    width:100%;
+    text-align : center;
+}
+
+/* 네비게이션 스타일 */
+#navi{
+    /* 메인메뉴(ul) 영역 스타일 지정 */
+
+    /* 메인메뉴가 왼쪽 상단에 붙을 수 있도록 여백 제거 */
+    margin : 0;
+    padding : 0;
+
+    /* navigator 영역에서 메인메뉴(ul)이 차지할 크기 지정 */
+    height:100%;
+    width:100%;
+
+    /* 메인메뉴 불렛 제거 */
+    list-style-type : none;
+}
+
+#navi >li{
+        /* 메인메뉴(ul) 내용 스타일 지정 */
+
+        /* 메인메뉴를 왼쪽 정렬 */
+        float : left;
+
+        /* 메인메뉴 배경색 지정 */
+        background-color:darkblue;
+
+        /* 메인메뉴 카테고리 크기 지정 */
+        width: 25%;
+        height: 100%;
+
+        /* 메인 메뉴 글자 상하 가운데 조절 */
+        line-height: 40px;
+
+        /* 서브메뉴 위치를 position : absolute로 지정하기 위해
+           부모 요소인 #navi >li에 position :relative 지정 */
+        position:relative;  
+}
+
+    #navi li a{
+        /* #navi 후손 중 li태그 후손 중 a태그에 대해서 스타일 지정 */
+
+        /* a태그는 inline 요소지만 크기를 지정할 수 있도록 inline-block 형식으로 변경  */
+        display : inline-block;
+
+        /* a 태그의 content 영역 크기 지정 */
+        width:100%;
+
+        /* a 태그 글씨 가운데 정렬 */
+        text-align : center;
+
+        /* a 태그 밑줄 제거 */
+        text-decoration: none;
+        
+        /* font 스타일 지정 */
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "굴림";
+        color:floralwhite;
+        
+        border : 1px solid black;
+        
+    }
+
+    #navi li:hover{
+        /* navi 후손 중 li를 마우스 오버 했을 때 */
+        background-color: crimson;
+    }
+
+    #navi li{
+        /* navi 후손 중 li 스타일 변경 시간 제어 */
+        transition-duration: 0.3s;
+    }
+
+    #navi li>ul{
+        /* navi 후손 중 li 태그의 자손 중 ul 태그(서브메뉴) 스타일 지정*/
+
+        /* position : absolute로 변경하여 content 위에 표시되고 위치를 제어할 수 있게 변경함 */
+        position : absolute;
+        width:100%;
+
+        /* 서브메뉴 배경색 지정 */
+        background-color: crimson;
+
+        /* 서브메뉴 불렛 제거 */
+        list-style-type: none;
+
+        /* 서브메뉴 여백 제거 */
+        margin : 0;
+        padding : 0;
+
+        /* 서브 메뉴를 투명하게 설정 */
+        opacity:0;
+
+    }
+
+    #navi ul>li>a{
+        /* 서브메뉴의 a태그 숨기기 */
+        opacity : 0;
+    }
+
+    #navi ul>li{
+        /* 서브메뉴 높이를 0으로 만들기 */
+        height:0;
+        line-height:0;
+    }
+
+    #navi>li:hover ul, #navi>li:hover ul a{
+        /* 메인메뉴 카테고리에 마우스 오버 시 서브메뉴 보이게하기 */
+        opacity:1;
+    }
+
+    #navi li:hover ul li{
+        height:50px;
+        line-height:50px;
+    }
+
+    #navi li ul{
+        /* 서브 메뉴 펼쳐지는 시간 조절 */
+        transition-duration: 0.3;
+    }
+
+    /* 홈 이동 로고 이미지 스타일 */
+    #home-logo{
+        /* 이미지 크기 조절 시 width 또는 height 하나만 조절하면
+            나머지 조절하지 않은 곳은 비율을 유지한 채로 조절됨 */
+            widows: 150%;
+
+            margin:auto;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            
+    }

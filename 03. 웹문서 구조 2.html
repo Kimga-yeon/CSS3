@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>02_2. 웹문서 구조 1(연습문제)</title>
+
+        <style>
+            div{
+                border : 1px solid red;
+
+                box-sizing : border-box;
+            }
+
+            .wrapper{
+                width:1000px;
+                height:800px;
+                
+                margin:auto;
+            }
+
+            .header{
+                width:100%;
+                height:20%;
+            }
+            
+                #header1{
+                    width:20%;
+                }
+
+                #header2{
+                    width:65%;
+                }
+
+                #header3{
+                    width:15%;
+                }
+
+            .header-float{
+                height:100%;
+                float:left;
+            }
+
+            .navigator{
+                width:100%;
+                height:5%;
+                clear:both;
+            }
+
+            .content{
+                width:100%;
+                height:55%;
+            }
+
+                #content1{
+                    width:15%;
+                }
+
+                #content2{
+                    width:65%;
+                }
+
+                #content3{
+                    width:20%;
+                }
+
+            .content-float{
+                height:100%;
+                float: left;
+            }
+            
+            .footer{
+                width:100%;
+                height:20%;
+
+                clear : both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div id="header1" class="header-float"></div>
+                <div id="header2" class="header-float"></div>
+                <div id="header3" class="header-float"></div>
+            </div>
+            <div class="navigator"></div>
+            <div class="content">
+                <div id="content1" class="content-float"></div>
+                <div id="content2" class="content-float"></div>
+                <div id="content3" class="content-float"></div>
+            </div>
+            <div class="footer"></div>
+        </div>
+
+    </body>
+</html>

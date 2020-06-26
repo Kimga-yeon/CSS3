@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\1_HTML"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "1_HTML"
+	}
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>01. 기본 구조</title>
+        <style>
+            /* 실습을 위해 div 테두리 표시 */
+            div{
+                border : 5px solid steelblue;
+            }
+
+            .test1{
+                width : 500px;
+                height : 200px;
+                /* width, height는 기본적으로 content 영역의 크기를 나타냄 */
+
+                /* 테두리 영역 */
+                border : 10px solid crimson;
+
+                /* padding 영역 */
+                padding:20px;
+
+                /* margin 영역 */
+                margin:20px;
+
+            }
+
+            .test2{
+                width : 500px;
+                height : 200px;
+                border : 10px solid;
+
+                box-sizing : border-box;
+                /* box-sizing : 지정되는 width, height의 적용 영역을 content 또는 border로 변경할 수 있는 속성
+                                (기본값은 content-box) */
+
+                /* border-box : == content+padding+border의 합이 지정된 width 또는 height가 되도록 하는 속성값 */
+            }
+
+            /* 상하 2등분 */
+            .wrapper{
+                width:600px;
+                height:500px;
+            }
+
+            #div1{
+                /* 부모의 너비와 같도록 100% 지정 */
+                width :100%;
+
+                /* content만 포함된 크기 따라서 content+padding+border 크기까지 고려한 크기로 조정해야 함 */
+                box-sizing:border-box;
+
+
+                /* 부모의 높이의 절반과 같도록 50% 지정 */
+                height : 50%;
+
+                background-color: aquamarine;
+            }
+
+            #div2{
+                width :100%;
+                
+                box-sizing:border-box;
+
+                height : 50%;
+
+                background-color:blanchedalmond;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>영역 관련 속성</h1>
+        <div class="test1">
+            1) content : 태그에 작성된 내용이 표시되는 영역 <br>
+            2) border : 요소 테두리 영역<br>
+            3) padding : content와 border 사이 영역<br>
+            4) margin : 타 요소와의 간격을 지정하는 영역
+        </div>
+
+        <div class="test1">
+            현재 div 전체 가로 길이 <br>
+            = width + 양쪽 padding + 양쪽 border + 양쪽 margin <br>
+            =  500  +   (20 * 2)   +  (20 * 2)   +  (20 * 2) <br>
+            = 420px 
+            <hr>
+            현재 div 전체 세로 길이 <br>
+            = heigt + 상하 padding + 상하 border + 상하 margin <br>
+            =  200  +   (20 * 2)   +  (20 * 2)   +  (20 * 2) <br>
+            = 320px
+        </div>
+
+        <hr>
+
+        <h1>div 내부에 div 넣기</h1>
+        <div class="test1">
+            <div class="test2">
+
+            </div>
+        </div>
+
+        <hr>
+        <h1>div 상하 2등분하기</h1>
+        <div class="wrapper">
+            <div id="div1"></div>
+            <div id="div2"></div>
+        </div>
+    </body>
+</html>

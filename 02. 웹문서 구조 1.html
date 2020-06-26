@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>02_1. 웹문서 구조 1</title>
+        <style>
+            /* div 경계선 표시 */
+            div{
+                border : 1px solid red;
+                /* div box-sizing을 모두 border-box로 변경 */
+                box-sizing : border-box;
+            }
+
+            /* 전체 화면 크기 지정 */
+            .wrapper{
+                width:1000px;
+                height:800px;
+
+                /* wrapper div가 화면 가운데에 올 수 있도록 margin 설정 */
+                margin:auto;
+            }
+
+            .header{
+                /* 폭은 부모와 똑같이, 높이는 부모의 20%만 차지 */
+                width:100%;
+                height:20%;
+            }
+
+            .content{
+                /* 폭은 부모와 똑같이, 높이는 부모의 60% 차지 */
+                width : 100%;
+                height :60%;
+            }
+
+            #content1{
+                /* 높이는 부모와 똑같이, 폭은 부모의 15% 차지 */
+                width:15%;
+                height:100%;
+
+                /* div는 block 형식이라 수직분할 되어있음 */
+                /* block 요소이지만 띄어서 왼쪽 정렬하면 수직 분할이 적용되지 않음 */
+                float : left;
+            }
+
+            #content2{
+                /* 높이는 부모와 똑같이, 폭은 부모의 85% 차지 */
+                width:85%;
+                height:100%;
+
+                float : left;
+
+            }
+
+            .footer{
+                /* 폭은 부모와 똑같이, 높이는 부모의 20% 차지 */
+                width:100%;
+                height:20%;
+
+                /* content 정렬에 사용된 float 해제 */
+                clear : both;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header"></div>
+            <div class="content">
+                <div id="content1"></div>
+                <div id="content2"></div>
+            </div>
+            <div class="footer"></div>
+        </div>
+
+    </body>
+</html>
