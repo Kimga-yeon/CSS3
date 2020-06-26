@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>14. 레이아웃 스타일 4</title>
+
+        <style>
+            div{
+                border : 1px solid black;
+            }
+
+            .outer{
+                border : 1px solid red;
+                position : relative
+            }
+
+            .first{
+                width : 300px;
+                height : 300px;
+                background-color: khaki;
+            }
+
+            .second{
+                width : 200px;
+                height : 200px;
+                background-color:lightcoral;
+                position : absolute;
+
+                /*  부모 요소의 상단으로부터 50px만큼 떨어진 부분 */
+                top:50px;
+
+                left : 50px;
+            }
+
+            .third{
+                width : 100px;
+                height : 100px;
+                background-color:lightseagreen;
+                position : absolute;
+
+                top:100px;
+                left:100px;
+            }
+            
+            /* 고정 위치 */
+            .fixed-area{
+                background-color: lightyellow;
+                width:50px;
+                height:50px;
+                /* 테두리 둥글게 */
+                border-radius:50%;
+                /* 글자 가운데 정렬 */
+                text-align:center;
+
+                /* 장평 조절 (글자 세로 가운데 정렬)*/
+                line-height: 50px;
+
+                /* 고정 위치 부여 */
+                position : fixed;
+
+                /* 위치 지정 */
+                right : 50px;
+                bottom : 50px;
+            }
+
+            .fixed-area> a{
+                /* a 태그 밑줄 제거 */
+                text-decoration: none;
+                color:black;
+            }
+
+            /* z-index 테스트 */
+            .wrap{
+                /* 내부 자식 요소들이 z-index를 설정할 수 있도록 부모 요소에 relative를 설정 */
+                position : relative;
+            }
+
+            .z-test1{
+                background-color: yellow;
+                width: 50px;
+                height : 50px;
+                position : absolute;
+                top : 100px;
+                left : 100px;
+
+                z-index:10;
+            }
+    
+            .z-test2{
+                background-color: yellowgreen;
+                width: 100px;
+                height : 100px;
+                position : absolute;
+                top : 50px;
+                left : 50px;
+
+                z-index:5;
+            }
+
+            .z-test3{
+                background-color: coral;
+                width: 150px;
+                height : 150px;
+             }
+             
+             /* visibility */
+            .vis-test{
+                width : 100px;
+                height : 100px;
+                border : 1px solid black;
+            }
+
+            .vis1{
+                background-color: wheat;
+                visibility: visible;
+            }
+
+            .vis2{
+                background-color: gold;
+                /* 요소 숨김 */
+                visibility: hidden;
+            }
+
+            .vis3{
+                background-color: silver;
+                /* 요소를 모양, 공간 모두 숨김 */
+                display : none;
+            }
+
+            /* float */
+            .float-test{
+                background-color: skyblue;
+                width:300px;
+                height:200px;
+            }
+
+            .float-left{
+                background-color: slateblue;
+                width:50px;
+                height:50px;
+                float :left;
+                /*  float : left를 가진 속성들이 위로 떠올라 gloat가 적용되지 ㅇ낳은 요소 위쪽으로 왼쪽 정렬 됨
+                    (content는 밀려서 float 정렬된 요소 뒤쪽에 표시됨) */
+            }
+
+            .float-clear{
+                background-color: steelblue;
+                clear:both;
+            }
+
+            .float-right{
+                background-color: pink;
+                width:50px;
+                height:50px;
+                float :right;
+            }
+        </style>
+    </head>
+    <body id="body top">
+        <h1>배치 관련 스타일(position)</h1>
+        <p>요소의 위치를 지정하는 속성</p>
+
+        <h3>position : relative / absolute </h3>
+        <pre>
+            relative : 해당 속성이 적용된 요소가 아닌 요소 내 하위 요소들을 left, right, top, bottom 속성을 이용하여 위치를 지정할 수 있다.
+            absolute : 요소의 기본 배치 순서를 무시하고 지정된 절대 위치에 요소를 표시함
+                        단, 상위요소가 relatve, absolulte, fixed인 경우 상위 요소를 기준으로 하여 상대적 위치를 가짐
+        </pre>
+
+        <div class="outer">
+            <div class="first">first</div>
+            <div class="second">second</div>
+            <div class="third">third</div>
+        </div>
+
+        <hr>
+
+        <h3>position : fixed; (고정 위치)</h3>
+        <p>
+            고정 위치는 브라우저 창을 기준으로 요소가 항상 같은 위치를 가지게 하는 속성
+        </p>
+
+        <div class="fixed-area">
+            <a href="#body-top">top</a>
+        </div>
+
+        <hr>
+
+        <h1>요소 Stack 순서 지정 스타일(z-index)</h1>
+        <p>
+            요소가 쌓이는 순서를 지정하는 속성<br>
+            지정된 숫자가 클수록 위쪽에 쌓임 <br>
+            <b style="color:Red">
+            (주의사항)<br>
+            z-index는 relative, absolute, fixed position이 설정된 요소에서만 정상 동작함<br>
+            -> z-index가 정상 동작하지 않을 경우 position : relative를 추가하면 됨    
+            </b>
+        </p>
+
+        <div class="wrap">
+            <div class="z-test z-test1"></div>
+            <div class="z-test z-test2"></div>
+            <div class="z-test z-test3"></div>
+        </div>
+
+        <hr>
+
+        <h1>요소 표시 여부 지정 스타일(visibility)</h1>
+        <p>페이지에 특정 요소를 보이거나, 안 보이게 하거나, 없애는 속성</p>
+
+        <div class="vis-test vis1"></div>
+        <div class="vis-test vis2"></div>
+        <div class="vis-test vis3"></div>
+
+        <hr>
+
+        <h1>요소 정렬 스타일(float/clear)</h1>
+        <pre>
+            float: 요소를 띄워서 정렬하는 속성
+                   요소들이 float로 설정된 방향으로 떠서 흐르듯이 정렬되어 배치됨
+            clear: float로 인해 요소들이 띄워져 있는 상태를 해제하는 속성
+                   해제할 때 float의 특정 방향을 지정하여 해제 가능(left, right, both)
+        </pre>
+
+        <h4>float 사용 안 함</h4>
+        <div class="float-test">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>Hello</div>
+            <div>World</div>
+            <div>5</div>
+        </div>
+
+        <br>
+
+        <h4>float : left</h4>
+        <div class="float-test">
+            <div class="float-left">1</div>
+            <div class="float-left">2</div>
+            <div class="float-left">3</div>
+            <div class="float-left">4</div>
+            <div>Hello</div>
+            <div>World</div>
+            <div class="float-clear">5</div>
+        </div>
+
+        <hr>
+        <h4>float : right</h4>
+        <div class="float-test">
+            <div class="float-right">1</div>
+            <div class="float-right">2</div>
+            <div class="float-right">3</div>
+            <div class="float-right">4</div>
+            <div>Hello</div>
+            <div>World</div>
+            <div class="float-clear">5</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>12. 레이아웃 스타일 2</title>
+
+        <style>
+            div{
+                width:100px;
+                height:100px;
+
+                /* 테두리의 폭(굵기) */
+                border-width:10px;
+            }
+
+            /* 테두리 없음 */
+            .border-test1{
+                border-style: none;
+                /* 우선 순위 제일 마지막 */
+            }
+
+            /* 테스트 숨김 */
+            .border-test2{
+                border-style: hidden;
+                /* 우선 순위 제일 우선 */
+                
+                 /* 태그의 그림자 */
+                box-shadow: 5px 5px 3px 2px gray;
+                        /* x축, y축, 번짐 크기, 그림자 크기, 그림자 색 */
+            }
+
+            .border-test3{
+                border-style : dotted;
+            }
+
+            .border-test4{
+                border-style : dashed;
+
+                /* 테두리 전방향 색 지정 */
+                /* border-color : red; */
+
+                /* 테두리 방향별 색 지정 */
+                border-top-color: red;
+                border-bottom-color: blue;
+                border-left-color: green;
+                border-right-color: yellow;
+            }
+
+            .border-test5{
+                border-style : double;
+            }
+
+            .border-test6{
+                border-style : groove;
+
+                /* 꼭지점 방향 별 곡선 지정 */
+                border-top-left-radius: 20%;
+                border-top-right-radius: 20%; 
+                border-bottom-left-radius: 20%;
+                border-bottom-right-radius: 20%;
+            }
+
+            .border-test7{
+                border-style : inset;
+            }
+
+            .border-test8{
+                border-style : outset;
+            }
+
+            .border-test9{
+                border-style : ridge;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>레이아웃 스타일 2</h1> 
+
+        <h3>[border-style] none : 테두리 없음</h3>
+        <div class="border-test1"></div>
+
+        <h3>[border-style] hidden : 테두리 숨김</h3>
+        <div class="border-test2"></div>
+
+        <h3>[border-style] dotted : 원으로 된 점선</h3>
+        <div class="border-test3"></div>
+
+        <h3>[border-style] dashed : 직선 모양 점선</h3>
+        <div class="border-test4"></div>
+        
+        <h3>[border-style] double : 이중 실선</h3>
+        <div class="border-test5"></div>
+
+        <h3>[border-style] groove</h3>
+        <div class="border-test6"></div>
+
+        <h3>[border-style] inset : 안쪽으로 들어간 모양의 테두리</h3>
+        <div class="border-test7"></div>
+
+        <h3>[border-style] outset : 바깥쪽으로 솟아오른 모양의 테두리</h3>
+        <div class="border-test8"></div>
+
+        <h3>[border-style] ridge</h3>
+        <div class="border-test9"></div>
+
+
+    </body>
+</html>

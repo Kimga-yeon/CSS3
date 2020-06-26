@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>11. 레이아웃 스타일 1 </title>
+
+        <style>
+            .size-test{
+                border : 1px solid red;
+            }
+
+
+            /* 고정 크기 */
+            /* 해당 요소의 영역이 고정 크기 단위로 할당되어 창의 크기가 변경되어도 영역의 크기가 변하지 않음 */
+
+            #test1{
+                width : 600px;
+                height : 200px;
+            }
+
+            /* 가변 크기 1 */
+            /* 창 크기가 변함에 따라 가변 크기 단위로 지정된 속성의 값이 변함 */
+
+            #test2{
+                width : 50%;
+                height : 200px;
+            }
+
+            /* 가변 크기 2 */
+            /* 창 크기 또는 부모 요소의 크기에 따라변경됨 */
+
+            #test3-out{
+                width : 600px;
+                height : 200px;
+            }
+
+            #test3-in{
+                width : 50px;
+                height : 100px;
+                border : 2px solid blue;
+            }
+
+            /* 화면 배치 방법 */
+            .block{
+                width:150px;
+                height:150px;
+                border:1px dolid black;
+                color : white;
+            }
+
+            .area1{ background-color: red;}
+            .area2{ background-color: orange;}
+            .area3{ background-color: yellow;}
+            .area4{ background-color: green;}
+            .area5{ background-color: blue;}
+
+            /* block -> inline */
+            .block-test1{
+                display:inline;
+            }
+
+            /* inline -> block */
+            .inline-test1{
+                display:block;
+            }            
+
+            /* inline-block */
+            .inline-block-test1{
+                display:inline-block;
+            }            
+
+        </style>
+    </head>
+    <body>
+        <h1> 레이아웃 스타일 1</h1>
+        <h3> width, height 속성</h3>
+        <p> content(내용)가 차지하고 있는 영역의 크기를 조절할 수 있는 속성
+            (block 요소에만 적용 가능)
+        </p>
+        <h4>고정 크기</h4>
+        <div id="test1" class="size-test"></div> 
+
+        <h4>가변 크기 1</h4>
+        <div id="test2" class="size-test"></div> 
+
+        <h4>가변 크기 2</h4>
+        <div id="test3-out" class="size-test">
+            <div id="test3-in"></div>
+        </div> 
+
+        <hr>
+        <h2>화면 배치 방법 변경</h2>
+        <p>block 요소, inline 요소의 속성을 변경하여 배치 방식을 변경할 수 있다. </p>
+
+        <h3>block 요소를 inline 요소로 변경</h3>
+        <pre>
+            display : inline;
+            지정된 요소의 형식이 inline으로 변경되어 화면을 수평분할하고 width, height 속성이 무시된다.
+        </pre>
+
+        <!--  class 속성은 속성값 작성 시 띄어쓰기를 이용하여 여러 값을 부여할 수 있다. -->
+        <div class="block block-test1 area1">첫번째 영역</div>
+        <div class="block block-test1 area2">두번째 영역</div>
+        <div class="block block-test1 area3">세번째 영역</div>
+        <div class="block block-test1 area4">네번째 영역</div>
+        <div class="block block-test1 area5">다섯번째 영역</div>
+
+        <hr>
+        <h3>inline 요소를 block 요소로 변경</h3>
+        <pre>
+            display : blcok;
+            지정된 요소의 형식이 blcok으로 변경되어 화면을 수평분할하고 width, height 속성이 적용된다.
+        </pre>
+
+        <!--  class 속성은 속성값 작성 시 띄어쓰기를 이용하여 여러 값을 부여할 수 있다. -->
+        <span class="block inline-test1 area1">첫번째 영역</span> 
+        <span class="block inline-test1 area2">두번째 영역</span>
+        <span class="block inline-test1 area3">세번째 영역</span>
+        <span class="block inline-test1 area4">네번째 영역</span>
+        <span class="block inline-test1 area5">다섯번째 영역</span>
+        <!-- 여러 개 커서 잡기 : ctrl+alt -->
+       
+        <hr>
+        <h3>inline-block 요소로 변경</h3>
+        <pre>
+            display : inline-block;
+            영역 분할 방법은 inline 요소의 방법인 수평 분할로 지정되지만
+            내용(content) 작성 부분은 block 요소로 지정된다. width, height 속성 지정이 가능하다.
+        </pre>
+
+        <!--  class 속성은 속성값 작성 시 띄어쓰기를 이용하여 여러 값을 부여할 수 있다. -->
+        <div class="block inline-block-test1 area1">첫번째 영역</div>
+        <div class="block inline-block-test1 area2">두번째 영역</div>
+        <div class="block inline-block-test1 area3">세번째 영역</div>
+        <div class="block inline-block-test1 area4">네번째 영역</div>
+        <div class="block inline-block-test1 area5">다섯번째 영역</div>
+
+    </body>
+</html>

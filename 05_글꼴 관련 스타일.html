@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>05. 글꼴 관련 스타일</title>
+
+        <!-- 외부 글꼴 적용 시 링크를 작성하는 부분 -->
+        <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* 글꼴 변경 */
+            #ff1{
+                font-family:"궁서체";
+            }
+            /* 글꼴 변경 */
+            #ff2{
+                font-family: "kh체", "고딕체";
+            }
+
+            /* 웹 폰트 스타일 설정 */
+            #web-font1{
+                font-size:50px;
+                font-family:Metal Mania;
+            }
+            
+            /* 외부 글꼴 링크 적용 방법 2 */
+            @font-face { font-family: 'CookieRun-Regular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff'); font-weight: normal; font-style: normal; }
+    
+            #web-font2{
+                font-family: "CookieRun-Regular";
+            }
+
+            /* 텍스트 크기 변경 */
+            #size1{
+                font-size:30px;
+            }
+            #size2{
+                font-size:200%
+                /* 장치, 브라우저마다 기본 폰트 크기가 존재 
+                   기본 폰트 크기의 작성한 %만큼 증가 혹은 감소*/
+            }
+            #size3{
+                font-size: 2em;
+                /* 1 em == 100% 가변크기와 같음 */
+            }
+
+            /* 텍스트 두께 설정 */
+            #fw1{
+                font-weight: bold;
+            }
+            #fw2{
+                font-weight: lighter;
+            }
+            #fw3{
+                font-weight: 500;
+            }
+            #fw3>p{
+                font-weight: bolder;
+            }
+
+            /* 텍스트를 작은 대문자로 변경 */
+            .fvc{
+                font-size: 200%;
+                font-weight:bold;
+            }
+
+            #fv{
+                font-variant:small-caps;
+            }
+
+            /* 텍스트 기울임 */
+            #fs1{
+                font-style:italic;
+                /* 애초에 기울어진 글꼴을 읽어옴 */
+            }
+            #fs2{
+                font-style:oblique;
+                /* 원본 글자는 그대로, 보여지는 화면만 기울임 */
+            }
+
+            #f1{
+                font:italic bold 20px/20px "궁서체";
+                          /* 글자크기/장평 */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>글꼴 관련 스타일</h1>
+        <h3>font-family 속성 : 텍스트의 글꼴을 지정하는 CSS 속성</h3>
+        <pre>
+            선택자{font-familt:글꼴1 이름, 글꼴2 이름, 글꼴3 이름; }
+            글꼴1이 해당 장치에 설치되지 않았다면 글꼴2로 대체. 2도 없으면 3으로 대체. 3도 없으면 기본값 사용
+        </pre>
+
+        <p id="ff1">글꼴 변경 테스트 1</p>
+        <p id="ff2">글꼴 변경 테스트 2</p>
+
+        <h4>웹 폰트 사용 방법</h4>
+        <p>웹 폰트 제공 사이트 예시 1 :
+            <a href=https://fonts.google.com target="_blank"> 구글 웹폰트 사이트</a>
+        </p>
+        <p id="web-font1">web font style test 1</p>
+
+        <p>
+            웹 폰트 제공 사이트 예시 2 : 
+            <a href="https://noonnu.cc" target="_blank">
+            눈누, 상업용 무료 한글 폰트 사이트
+            </a>
+        </p>
+
+        <p id="web-font2">한글 웹 폰트 스타일 테스트</p>
+
+        <hr>
+
+        <h3>font-size 속성 : 텍스트 크기 변경</h3>
+        <pre>
+            선택자{ font-size:크기;}
+            *고정/가변 크기가 존재함
+        </pre>
+
+        <ul>
+            <li id="size1">고정크기 px 테스트</li>
+            <li id="size2">가변크기 % 테스트</li>
+            <li id="size3">가변크기 em 테스트</li>
+        </ul>
+
+        <hr>
+        <h3>font-weight 속성 : 텍스트 두께를 표현할 때 사용하는 속성</h3>
+        <pre>
+            선택자{font-weight:normal | bold | bolder | lighter | 100~900; }
+            
+            bold : 두껍게(진하게)
+            bolder : 상위 요소에서 상속된 굵기보다 더 두껍게(진하게)
+        </pre>
+
+        <ul>
+            <li id="fw1">그냥 굵게</li>
+            <li id="fw2">얇게</li>
+            <li id="fw3">
+                font-weight:500
+                <p>상위보다 더 굵게</p>
+            </li>
+        </ul>
+
+        <hr>
+        <h3> font-variant 속성 : 입력된 값을 작은 대문자로 변경할 때 사용 </h3>
+        <p class="fvc">Show Me The Money</p>
+        <p class="fvc">SHOW ME THE MONEY</p>
+        <p class="fvc" id="fv">show me the money</p>
+        
+        <hr>
+        <h3>font-style 속성 : 텍스트 기울기 지정<h3>
+            <pre>
+                선택자 { font-style : normal | italic | oblique; }
+            </pre>
+            <p class="fvc" id="fs1">italic 기울임 글꼴</p>
+            <p class="fvc" id="fs2">oblique 기울임 글꼴</p>
+
+            <hr>
+            <h3>font 속성 : 글꼴 관련 스타일을 한 번에 지정 가능</h3>
+            <pre>
+                선택자 { font : font-style font-variant font-weight font-size/line-height font-family; }
+            </pre>
+            <p id="f1">글꼴 관련 스타일 한 번에 지정 1</p>
+    </body>
+</html>

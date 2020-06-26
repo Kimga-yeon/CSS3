@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>16. 트랜지션(Transition)</title>
+        <style>
+            .test1{
+                width:100px;
+                height : 100px;
+                background-color: crimson;
+                border : 1px solid black;
+
+                transition-duration: 1s;
+            }
+
+            .test1:hover{
+                background-color: cornsilk;
+                width:200px;
+                height:200px;
+                transition-duration: 2s;
+                /* 변화 시간을 2초 부여 */
+            }
+
+            .test2{
+                width:100px;
+                height : 100px;
+                background-color: crimson;
+                border : 1px solid black;
+
+                transition-duration: 1s;
+            }
+
+            .test2:hover{
+                width:200px;
+                height : 200px;
+                background-color:darkblue;
+
+                transform:rotateZ(180deg);
+
+                /* 원하는 스타일 속성을 작성하여 시간을 따로 지정할 수 있음 */
+                transition-property : background-color,transform,width,height;
+                transition-duration : 2s,5s,1s,3s;
+                }
+
+            .test3{
+                width:100px;
+                height : 100px;
+                background-color: crimson;
+                border : 1px solid black;
+
+                transition-duration: 3s;
+            }
+
+            .test3:hover{
+                background-color: darkcyan;
+                transform : rotateZ(720deg); 
+                transition-duration:3s;
+                transition-timing-function: ease;
+                /* 실행 속도 조절 : ease, ease-in, ease-out, ease-in-out */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>트랜지션</h1>
+        <p> 시간에 따라 웹 요소의 스타일 속성이 조금씩 변화하는 것을 의미함</p>
+
+        <h3>트랜지션 진행시간 지정하기</h3>
+        <div class="test1"></div>
+
+        <hr>
+        <h3> 트랜지션 진행별 시간 설정</h3>
+        <div class="test2"></div>
+
+        <hr>
+        <h3> 트랜지션 진행별 속도 설정</h3>
+        <div class="test3"></div>
+
+
+    </body>
+</html>

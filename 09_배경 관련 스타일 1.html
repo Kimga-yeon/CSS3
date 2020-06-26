@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>09. 배경 관련 스타일</title>
+
+        <style>
+            body{
+                background-color: seashell;
+                background-image: url("W:/메스 이펙트 영상/MassEffect3 2017-06-28 20-56-30-381.jpg");
+
+                background-size: 100%;
+                            /* 가로 100% 세로 auto */
+                /*background-size: 100% 50%;*/
+                              /* 가로 세로 */
+                background-repeat:no-repeat;
+                /* 이미지 반복 제어 */
+
+                background-attachment: fixed;
+                /* 배경 고정 */
+
+                /*background-attachment: scroll;*/
+                /* 배경을 스크롤로 움직임(기본값) */
+            }
+            /* 배경 적용 범위 설정 */
+            .div-test{
+            background-color: white;
+            border:10px dashed black;
+            margin :30px;
+            /* margin : 다른 요소와의 간격 */
+            padding :20px;
+            /*  요소 내 내용과 테두리 사이의 간격 */
+            width:20%;
+            float:left;
+        }
+
+        #div1{
+            background-clip : border-box;
+            /* 테두리 포함 자기 영역 */
+        }
+
+        #div2{
+            background-clip:padding-box;
+            /* 테두리 빼고 자기 영역 */
+        }
+
+        #div3{
+            background-clip:content-box;
+            /* content만 자기 영역 */
+        }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>배경색과 배경 이미지</h1>
+
+        <pre>
+            body{ background-color : 색상명 | rgb 등;} 배경색 지정 가능
+        </pre>
+        <a href="http://www.w3schools.com/colors/colors_names.asp" target="_blank">색상명 참조 사이트로 이동</a><br>
+        <a href="http://www.colorpicker.com" target="_blank">색상 추출 사이트로 이동</a>        
+
+        <hr>
+        <h3>배경 적용 범위 설정</h3>
+        <pre>
+            선택자{background-clip : border-box | padding-box | content=box;}
+        </pre>
+
+        <div class="div-test" id="div1">굳세게 가는 수 주며, 같은 거친 것이다. 그것을 청춘의 뭇 트고, 끝까지 이상 청춘은 교향악이다. 인도하겠다는 이는 이상은 그리하였는가? 하는 이성은 피고 봄바람이다. 하여도 능히 밥을 더운지라 그들에게 싸인 가진 같으며, 가치를 뿐이다. 것이 지혜는 모래뿐일 튼튼하며, 눈에 것은 품으며, 것이다. 싹이 사는가 같은 피어나기 없으면, 평화스러운 구하지 것이다. 그들은 얼음이 우리의 가장 같지 쓸쓸하랴? 있을 얼음 오아이스도 소담스러운 예수는 몸이 힘있다. 생명을 따뜻한 얼마나 이상 온갖 인생의 청춘은 무한한 실로 봄바람이다. 속잎나고, 남는 모래뿐일 착목한는 것이다.</div>
+        <div class="div-test" id="div2">굳세게 가는 수 주며, 같은 거친 것이다. 그것을 청춘의 뭇 트고, 끝까지 이상 청춘은 교향악이다. 인도하겠다는 이는 이상은 그리하였는가? 하는 이성은 피고 봄바람이다. 하여도 능히 밥을 더운지라 그들에게 싸인 가진 같으며, 가치를 뿐이다. 것이 지혜는 모래뿐일 튼튼하며, 눈에 것은 품으며, 것이다. 싹이 사는가 같은 피어나기 없으면, 평화스러운 구하지 것이다. 그들은 얼음이 우리의 가장 같지 쓸쓸하랴? 있을 얼음 오아이스도 소담스러운 예수는 몸이 힘있다. 생명을 따뜻한 얼마나 이상 온갖 인생의 청춘은 무한한 실로 봄바람이다. 속잎나고, 남는 모래뿐일 착목한는 것이다.</div>
+        <div class="div-test" id="div3">굳세게 가는 수 주며, 같은 거친 것이다. 그것을 청춘의 뭇 트고, 끝까지 이상 청춘은 교향악이다. 인도하겠다는 이는 이상은 그리하였는가? 하는 이성은 피고 봄바람이다. 하여도 능히 밥을 더운지라 그들에게 싸인 가진 같으며, 가치를 뿐이다. 것이 지혜는 모래뿐일 튼튼하며, 눈에 것은 품으며, 것이다. 싹이 사는가 같은 피어나기 없으면, 평화스러운 구하지 것이다. 그들은 얼음이 우리의 가장 같지 쓸쓸하랴? 있을 얼음 오아이스도 소담스러운 예수는 몸이 힘있다. 생명을 따뜻한 얼마나 이상 온갖 인생의 청춘은 무한한 실로 봄바람이다. 속잎나고, 남는 모래뿐일 착목한는 것이다.</div>
+    </body>
+</html>

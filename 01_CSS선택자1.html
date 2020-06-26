@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>01. CSS 선택자 1</title>
+
+        <style>
+            /* CSS 주석 */
+
+            /* 모든 요소(전체) 선택자(*)  */
+            *{
+                /* color : orange -> 모든 글씨 색을 주황색으로 */
+            }
+
+            p { color: orchid;}
+
+            #id1{color:red;
+                  background-color:cornsilk;}
+            #id2{color:orange}
+            #id3{color:yellow}
+            #id4{color:green}
+            #id5{color:blue}
+
+            .class1{color:crimson;}
+            .class2{color:darkblue;}
+        </style>
+    </head>
+    <body>
+        <h1>CSS란?</h1>
+        <p>Cascading Style Sheets 약자로 문서에 종속(포함)된 스타일을 지정하는 시트 <br>
+            (마크업 언어가 실제 표시되는 방법을 기술하는 언어)
+        </p>
+
+        <hr>
+        <h1>선택자란?</h1>
+        <p>특정한 HTML 태그를 선택할 때 사용하는 기능으로, 태그를 선택하여 원하는 스타일과 기능을 적용할 수 있다.</p>
+
+        <h2>CSS 기본 선택자</h2>
+        <h3>모든 요소(태그) 선택자(*)</h3>
+        <p>HTML 문서 안의 모든 태그를 선택할 때 사용.</p>
+
+        <hr>
+        <h3>태그 선택자(태그명)</h3>
+        <p>HTML 문서 내에 같은 태그를 모두 선택할 때 사용</p>
+        <pre>
+            p { color : red; } 와 같은 형태로 사용됨
+        </pre>
+
+        <hr>
+
+        <h3>아이디 선택자(#)</h3>
+        <p>HTML 문서 내에 해당하는 아이디 속성의 값을 가진 태그만 선택할 때 사용 <br>
+            * HTML문서 내에서 태그별 id 속성값은 유일해야 함(중복X) </p>
+        
+        <pre>
+            #아이디속성값{color:blue}
+        </pre>
+        <ol>
+            <li id="id1">아이디 선택자 테스트1</li>
+            <li id="id2">아이디 선택자 테스트2</li>
+            <li id="id3">아이디 선택자 테스트3</li>
+            <li id="id4">아이디 선택자 테스트4</li>
+            <li id="id5">아이디 선택자 테스트5</li>
+        </ol>
+
+        <hr>
+        <h3>클래스 선택자(.)</h3>
+        <p>
+            .클래스명{color : red}
+        </p>
+
+        <ul>
+            <li class="class1">클래스 선택자 테스트1</li>
+            <li class="class1">클래스 선택자 테스트2</li>
+            <li class="class2">클래스 선택자 테스트3</li>
+            <li class="class1">클래스 선택자 테스트4</li>
+            <li class="class2">클래스 선택자 테스트5</li>
+        </ul>
+    </body>
+</html>

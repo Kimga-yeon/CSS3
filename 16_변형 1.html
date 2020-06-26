@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>16. 변형 1</title>
+
+        <style>
+            img{
+            width:250px;
+            height:200px;
+            }
+
+            /* 좌우로 움직이기 */
+            .trans1:hover{
+                /* hover: 마우스가 올라갔을 때 상태가 변하게 하는 선택자 */
+                -ms-transform : translateX(50px); /* IE 9버전 이하 호환*/
+                -webkit-transform : translateX(50px); /* safari, 크롬 */
+            }
+
+            /* 위아래로 움직이기 */
+            .trans2:hover{
+                transform:translateY(50px);
+            }
+
+            /* 대각선으로 움직이기 */
+            .trans3:hover{
+                transform:translate(50px, 50px);
+                                  /* x축, y축 */
+            }
+
+            /* 가로로 확대 */
+            .trans4:hover{
+                transform : scaleX(2);
+                /* 가로로 2배 확장 */
+            }
+
+            /* 세로로 확대 */
+            .trans5:hover{
+                transform : scaleY(2);
+                /* 세로로 2배 확장 */
+            }
+
+            /* 전체 확대 */
+            .trans6:hover{
+                transform : scale(2,2);
+                /* 2배 확장 */
+            }
+
+            /* 지정한 각도만큼 회전 */
+            .trans7:hover{
+                transform :rotate(45deg)
+                /* 시계 방향 45도 회전 */
+            }
+
+            /* 지정한 각도만큼 X축 비틀기 */
+            .trans8:hover{
+                transform : skewX(45deg);
+            }
+
+            /* 지정한 각도만큼 Y축 비틀기 */
+            .trans9:hover{
+                transform : skewY(45deg);
+            }
+
+            /* 지정한 각도만큼 X축, Y축 비틀기 */
+            .trans10:hover{
+                transform : skew(10deg, 10deg);
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>2차원 변형</h1>
+        <h3>좌우로 움직이기</h3>
+        <img src="image/flower1.PNG" class="trans1">
+        <hr>
+
+        <h3>위아래로 움직이기</h3>
+        <img src="image/flower2.PNG" class="trans2">
+        <hr>
+
+        <h3>대각선으로 움직이기</h3>
+        <img src="image/flower3.PNG" class="trans3">
+        <hr>
+
+        <h3>가로로 확대하기</h3>
+        <img src="image/flower4.PNG" class="trans4">
+        <hr>
+
+        <h3>세로로 확대하기</h3>
+        <img src="image/flower5.PNG" class="trans5">
+        <hr>
+
+        <h3>전체 확대하기 </h3>
+        <img src="image/river1.PNG" class="trans6">
+        <hr>
+
+        <h3>지정한 각도만큼 회전</h3>
+        <img src="image/river2.PNG" class="trans7">
+        <hr>
+
+        <h3>지정한 각도만큼 가로 축 비틀기</h3>
+        <img src="image/city1.PNG" class="trans8">
+        <hr>
+
+        <h3>지정한 각도만큼 세로 축 비틀기</h3>
+        <img src="image/tower1.PNG" class="trans9">
+        <hr>
+
+        <h3>지정한 각도만큼 가로,세로 축 비틀기</h3>
+        <img src="image/forest1.PNG" class="trans10">
+        <hr>
+
+    </body>
+</html>
